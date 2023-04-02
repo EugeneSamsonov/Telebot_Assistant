@@ -7,8 +7,6 @@ from pydub import AudioSegment
 bot = telebot.TeleBot(config.TOKEN)
 
 # start
-
-
 @bot.message_handler(commands=["start"])
 def start(message):
     if message.from_user.id == config.AdminTelegramID:
