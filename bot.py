@@ -408,14 +408,24 @@ def diary(message):
     bot.send_message(message.chat.id, "Выберите предмет",
                      reply_markup=main_menu)
 
-    with open(f"users_list/{message.from_user.id}_inf.txt", 'w') as inf_file:
-        inf_file.write("")
-    with open(f"users_list/{message.from_user.id}_mat.txt", 'w') as mat_file:
-        mat_file.write("")
-    with open(f"users_list/{message.from_user.id}_eng.txt", 'w') as eng_file:
-        eng_file.write("")
-    with open(f"users_list/{message.from_user.id}_rus.txt", 'w') as rus_file:
-        rus_file.write("")
+    try:
+        with open(f"users_list/{message.from_user.id}_inf.txt", 'r') as inf_file:
+            inf_file.read()
+        with open(f"users_list/{message.from_user.id}_mat.txt", 'r') as mat_file:
+            mat_file.read()
+        with open(f"users_list/{message.from_user.id}_eng.txt", 'r') as eng_file:
+            eng_file.read()
+        with open(f"users_list/{message.from_user.id}_rus.txt", 'r') as rus_file:
+            rus_file.read()
+    except:
+        with open(f"users_list/{message.from_user.id}_inf.txt", 'w') as inf_file:
+            inf_file.write("")
+        with open(f"users_list/{message.from_user.id}_mat.txt", 'w') as mat_file:
+            mat_file.write("")
+        with open(f"users_list/{message.from_user.id}_eng.txt", 'w') as eng_file:
+            eng_file.write("")
+        with open(f"users_list/{message.from_user.id}_rus.txt", 'w') as rus_file:
+            rus_file.write("")
 
 
 # Text tracking
