@@ -106,7 +106,7 @@ venv.bak/
 
 # other
 voice/
-users lists/
+users_lists/
 config.py
 Ассистент_origin.bat
 .idea/
