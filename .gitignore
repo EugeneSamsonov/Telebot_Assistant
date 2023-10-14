@@ -105,8 +105,8 @@ venv.bak/
 .mypy_cache/
 
 # other
+config.py
+.idea/
 voice/
 users_lists/
-config.py
 Ассистент_origin.bat
-.idea/
